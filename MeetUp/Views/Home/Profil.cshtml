@@ -1,0 +1,85 @@
+﻿@using MeetUp
+@model dynamic
+@{
+    ViewBag.Title = "Profil";
+}
+
+<h2>Profil</h2>
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="~/Content/bootstrap.css">
+    <title>Registration</title>
+</head>
+<body style="background-color:indigo; margin: 0; padding: 0">
+    
+    <h2 style="text-align:center; color:white">Twój profil</h2>
+    <div style="height:40px"></div>
+    <div style="color:black">
+        @using (Html.BeginForm())
+        {
+            <div style="height:40px"></div>
+            <table>
+                <tr class="form-group" style="height:40px">
+                    <td style="text-align: right; font:800; font-size:large; color: white">Login: </td>
+                    <td style="text-align: left; font:800; font-size:large; color: white">@Model.User.login</td>
+                </tr>
+                <tr class="form-group" style="height:40px">
+                    <td style="text-align: right; font:800; font-size:large; color: white">Imię: </td>
+                    <td style="text-align: left; font:800; font-size:large; color: white">@Model.User.name</td>
+                </tr>
+                <tr class="form-group" style="height:40px">
+                    <td style="text-align: right; font:800; font-size:large; color: white">Nazwisko: </td>
+                    <td style="text-align: left; font:800; font-size:large; color: white">@Model.User.surname</td>
+                </tr>
+                <tr class="form-group" style="height:40px">
+                    <td style="text-align: right; font:800; font-size:large; color: white">Wiek: </td>
+                    <td style="text-align: left; font:800; font-size:large; color: white">@Model.User.age</td>
+
+                </tr>
+
+            </table>
+        }
+        <table class="table" style="font:800; font-size:large; color: white">
+            <tr>
+                <th>Id</th>
+                <th>Nazwa</th>
+                <th>Liczba biletów</th>
+                <th>Miejsce</th>
+                <th>Data</th>
+                <th></th>
+            </tr>
+            @foreach (var e in Model.Events)
+            {
+            <tr>
+                <td>
+                    @e.Event_Id
+                </td>
+                <td>
+                    @e.Name
+                </td>
+                <td>
+                    @e.number
+                </td>
+                <td>
+                    @e.Place
+                </td>
+                <td>
+                    @e.Date
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", "Eventy") |
+                    @Html.ActionLink("Details", "Details") |
+                    @Html.ActionLink("Delete", "Delete")
+                </td>
+            </tr>
+            }
+        </table>
+
+
+    </div>
+</body>
+</html>

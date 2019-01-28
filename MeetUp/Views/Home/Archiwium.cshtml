@@ -1,0 +1,32 @@
+﻿@model MeetUp.ViewModels.ArchiwEvent
+@{
+    ViewBag.Title = "Archiwium";
+}
+
+<h2>Archiwium</h2>
+
+<div>
+    @foreach (var e in Model.Events)
+    {
+
+        <div style="text-align:center; color:lightgrey; font-size:x-large; font:800">
+            @Html.DisplayFor(m => e.Name)
+        </div>
+
+        <div style="text-align:center; font-size:medium">
+            <p style="color:white">@Html.DisplayFor(m => e.palce)</p>
+        </div>
+        <div style="text-align:center; font-size:medium">
+            <p style="color:white">@Html.DisplayFor(m => e.Date)</p>
+
+        </div>
+        <div style="text-align:center">
+            <b style="color:black; font:800">Organizator: @Html.DisplayFor(m => e.User.login)</b>
+        </div>
+        <div style="text-align:center">
+            @Html.ActionLink("Zobaz wiecej", "EventDetails");
+        </div>
+        <div style="height:40px"></div>
+    }
+</div>
+

@@ -1,0 +1,139 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<!DOCTYPE HTML>
+<html lang="pl">
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+    <meta charset="utf-8" />
+
+    <style>
+
+        .button {
+            background-color: saddlebrown;
+            border: none;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+
+
+        img {
+            width: 125%;
+        }
+
+        input[type=text] {
+            width: 100%;
+            border: 2px;
+            border-radius: 4px;
+            margin: 8px 0;
+            outline: none;
+            padding: 8px;
+            margin-left: 500px;
+            box-sizing: border-box;
+            transition: .3s;
+            background-color: #363636;
+            color: coral;
+            font-size: 20px;
+        }
+
+            input[type=text]:focus {
+                border-color: dodgerBlue;
+                box-shadow: 0 0 8px 0 dodgerBlue;
+            }
+
+
+        body {
+            background-color: #535353;
+        }
+
+        #container {
+            width: 1200px;
+            height: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: #535353;
+        }
+
+        #logo {
+            background-color: #52527a;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-bottom: 10px;
+        }
+
+
+
+        #content {
+            background-color: indigo;
+            float: left;
+            padding: 30px;
+            width: 600px;
+            height: 600px;
+            font-size: 60px;
+            color: saddlebrown;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        #gadget {
+            float: left;
+            width: 600px;
+            height: 600px;
+            background-color: dimgray;
+            text-align: center;
+        }
+
+        #footer {
+            clear: both;
+            background-color: #003300;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 10px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div id="container">
+
+
+        <div class="logo">
+            <input type="text" placeholder="Znajdz miejsce">
+        </div>
+
+
+        <div id="content">
+
+            <h1>
+                MEETUP:
+            </h1>
+            <h1>
+                YOUR EVENT
+            </h1>
+            <h1>
+                PLANNER
+            </h1>
+            <button class="button button3">Learn More</button>
+        </div>
+
+        <div id="gadget">
+            <img src="~/zdjecia/mtp.png" />
+        </div>
+
+
+    </div>
+
+</body>
+</html>
